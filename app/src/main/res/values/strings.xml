@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ToyRobot</string>
+    <string name="output">Output</string>
 </resources>
