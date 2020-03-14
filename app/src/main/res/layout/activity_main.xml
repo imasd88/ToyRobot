@@ -27,18 +27,19 @@
         android:layout_marginBottom="@dimen/space_32"
         android:text="@string/output"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/command"
+        app:layout_constraintBottom_toTopOf="@id/commandET"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
     <!--    use viewbindg to update this view -->
 
 
     <EditText
-        android:id="@+id/command"
+        android:id="@+id/commandET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_32"
         android:hint="@string/hint"
+        android:imeOptions="actionDone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/outputTv"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,6 +52,6 @@
         android:text="@string/execute"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/command" />
+        app:layout_constraintTop_toBottomOf="@id/commandET" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
