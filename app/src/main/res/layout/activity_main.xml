@@ -15,7 +15,7 @@
         android:layout_marginStart="@dimen/space_24"
         android:layout_marginLeft="@dimen/space_24"
         android:layout_marginTop="@dimen/space_24"
-        android:text="Instructions:\nPLACE X,Y,F\nMOVE\nLEFT or RIGHT\nREPORT"
+        android:text="@string/instructions"
         android:textSize="@dimen/size_16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_24"
-        android:text="@string/run"
+        android:text="@string/execute"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/command" />
