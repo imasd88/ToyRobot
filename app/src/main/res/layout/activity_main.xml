@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,20 +9,48 @@
     tools:context=".ui.MainActivity">
 
     <TextView
+        android:id="@+id/instructionsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_24"
+        android:layout_marginLeft="@dimen/space_24"
+        android:layout_marginTop="@dimen/space_24"
+        android:text="Instructions:\nPLACE X,Y,F\nMOVE\nLEFT or RIGHT\nREPORT"
+        android:textSize="@dimen/size_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/outputTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_32"
         android:text="@string/output"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/command"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
     <!--    use viewbindg to update this view -->
-    <TextView
+
+
+    <EditText
+        android:id="@+id/command"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_32"
+        android:hint="@string/hint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputTv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/runButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Instructions: PLACE X,Y,F\nMOVE\nLEFT or RIGHT\nREPORT"
+        android:layout_marginTop="@dimen/space_24"
+        android:text="@string/run"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/outputTv" />
+        app:layout_constraintTop_toBottomOf="@id/command" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
