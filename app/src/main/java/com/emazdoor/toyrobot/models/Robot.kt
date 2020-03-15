@@ -3,7 +3,7 @@ package com.emazdoor.toyrobot.models
 class Robot {
 
     var currentPosition: RobotPosition? = null
-    val step = 1
+    private val step = 1
 
     fun place(position: RobotPosition) {
         currentPosition = position
@@ -17,8 +17,6 @@ class Robot {
                 Directions.SOUTH -> RobotPosition(xPos, yPos - step, direction)
                 Directions.EAST -> RobotPosition(xPos + step, yPos, direction)
                 Directions.WEST -> RobotPosition(xPos - step, yPos, direction)
-                else ->
-                    null
             }
         }
     }
