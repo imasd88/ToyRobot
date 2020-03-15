@@ -4,6 +4,7 @@ import com.emazdoor.toyrobot.models.GameBoard
 import org.junit.Test
 
 import org.junit.Assert.*
+
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -45,7 +46,7 @@ class GameBoardUnitTest {
 
     @Test
     fun `test isValidMoveLocation with largest valid x and y value should return true`() {
-        assertTrue(gameBoard.isValidMoveLocation(5, 5))
+        assertTrue(gameBoard.isValidMoveLocation(gameBoard.getWidth(), gameBoard.getHeight()))
     }
 
     @Test

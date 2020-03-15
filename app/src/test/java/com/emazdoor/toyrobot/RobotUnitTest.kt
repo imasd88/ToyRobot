@@ -43,4 +43,17 @@ class RobotUnitTest {
         robot.rotate(Commands.LEFT)
         assertNull(robot.currentPosition)
     }
+
+    @Test
+    fun `test rotate() rotates robot when called after place()`() {
+        robot.place(RobotPosition(1, 2, Directions.NORTH))
+        robot.rotate(Commands.LEFT)
+        assertEquals(Directions.WEST, robot.currentPosition?.direction)
+    }
+
+    @Test
+    fun `test move() does not move the robot if not placed first`() {
+        robot.move()
+        assertNull(robot.currentPosition)
+    }
 }

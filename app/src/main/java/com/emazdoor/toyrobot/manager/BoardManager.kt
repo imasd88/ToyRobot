@@ -34,12 +34,10 @@ class BoardManager(val board: GameBoard, val robot: Robot) {
             executeCommand(Commands.REPORT)
         else
             return /*"wrong command"*/
-//        return null
 
     }
 
     fun executeCommand(command: Commands, position: RobotPosition? = null) {
-        Log.e("ASD", "Command: $command")
         when (command) {
             Commands.PLACE -> {
                 position?.run {
