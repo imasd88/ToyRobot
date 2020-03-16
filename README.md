@@ -55,17 +55,17 @@ The source files, the test data and any test code as well as instructions on how
 It is not required to provide any graphical output showing the movement of the toy robot.
 
 ## Instruction to Run and test
-Steps to run application
+**Steps to run application**
 
 - Download by clicking Clone or Download button
 - Once downloaded Unzip the download
 - Open Android Studio
-- Click `File>Open` and open the project in Android Studio
+- Click `File > Open` and open the project in Android Studio
 - Click OK and proceed to download the required APIs.
 - Once APIs are downloaded, connect Android Phone (with Android Oreo or above) to computer
-- Run the App using the run button (play sign from top) or click on Run > Run 'app'
+- Run the App using the run button (play sign from top) or click on `Run > Run 'app'`
 
-Steps to test application
+**Steps to test application**
 
 - In Android Studio, navigate to test folder [com.emazdoor.toyrobot (test)]
-- Right click on test folder and click on *Run 'Test in 'toyrobot''* or `Ctrl + Shift + F10`
+- Right click on test folder and click on **Run 'Test in 'toyrobot''** or `Ctrl + Shift + F10` on windows
