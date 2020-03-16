@@ -55,7 +55,6 @@ class BoardManager(val board: GameBoard, val robot: Robot) {
                 robot.rotate(command)
             }
             Commands.REPORT -> {
-                Log.e("ASD", "REPORT")
                 if (this::boardManagerListener.isInitialized)
                     robot.currentPosition?.apply {
                         boardManagerListener.updatePositionDetail(xPos, yPos, direction)
