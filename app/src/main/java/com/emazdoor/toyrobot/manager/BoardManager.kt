@@ -1,10 +1,8 @@
 package com.emazdoor.toyrobot.manager
 
-import android.util.Log
 import com.emazdoor.toyrobot.has
 import com.emazdoor.toyrobot.listener.BoardManagerListener
 import com.emazdoor.toyrobot.models.*
-import java.lang.Exception
 
 class BoardManager(val board: GameBoard, val robot: Robot) {
 
@@ -22,8 +20,10 @@ class BoardManager(val board: GameBoard, val robot: Robot) {
                     val direction = commandString[2]
                     val updatedPosition = RobotPosition(x, y, Directions.valueOf(direction))
                     executeCommand(Commands.PLACE, updatedPosition)
-                } catch (e: Exception) {
-//                    return "Something went wrong" //ahmed: change this
+                } catch (e: NumberFormatException) {
+                    boardManagerListener.reportError("Wrong Direction!\nvalid directions are\nNORTH, SOUTH, EAST or WEST")
+                } catch (e: IllegalArgumentException) {
+                    boardManagerListener.reportError("Wrong x and/or y value\nvalid entries should be integer")
                 }
             }
         } else if (command has "LEFT")

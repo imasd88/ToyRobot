@@ -99,6 +99,7 @@ class BoardManagerUnitTest {
         val currentPosition = boardManager.robot.currentPosition
         assertEquals(Directions.NORTH, currentPosition?.direction)
     }
+
     @Test
     fun `test rotations and moves from east`() {
         val boardManager = BoardManager(GameBoard(), Robot())

@@ -1,10 +1,10 @@
 package com.emazdoor.toyrobot.ui
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import com.emazdoor.toyrobot.databinding.ActivityMainBinding
 import com.emazdoor.toyrobot.listener.BoardManagerListener
 import com.emazdoor.toyrobot.manager.BoardManager
@@ -55,11 +55,14 @@ class MainActivity : AppCompatActivity(), BoardManagerListener {
     }
 
     override fun updatePositionDetail(x: Int, y: Int, direction: Directions) {
-//        binding.outputTv.text = "X: $x, Y: $y, F: ${direction.name}"
-        updateOutputView(x, y, direction)
+        updateOutputView("X: $x, Y: $y, F: ${direction.name}")
     }
 
-    private fun updateOutputView(x: Int = 0, y: Int = 0, direction: Directions = Directions.NORTH) {
-        binding.outputTv.text = "X: $x, Y: $y, F: ${direction.name}"
+    override fun reportError(message: String) {
+        updateOutputView(message)
+    }
+
+    private fun updateOutputView(message: String = "X: 0, Y: 0, F: ${Directions.NORTH}") {
+        binding.outputTv.text = message
     }
 }
