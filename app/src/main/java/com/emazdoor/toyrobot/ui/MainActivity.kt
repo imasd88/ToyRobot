@@ -32,12 +32,16 @@ class MainActivity : AppCompatActivity(), BoardManagerListener {
                 processCommand()
             }
 
+            restartButton.setOnClickListener {
+                boardManager.restartGame()
+                updateOutputView()
+            }
+
             commandET.setOnEditorActionListener { v, _, _ ->
                 hideKeyboard(v)
                 processCommand()
                 true
             }
-
         }
         updateOutputView()
     }

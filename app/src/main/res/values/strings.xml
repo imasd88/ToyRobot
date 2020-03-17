@@ -4,4 +4,5 @@
     <string name="hint">enter each step at a time..</string>
     <string name="execute">execute</string>
     <string name="instructions">Instructions:\n1. PLACE X,Y,F\n2. MOVE\n3. LEFT or RIGHT\n4. REPORT</string>
+    <string name="restart">restart</string>
 </resources>

@@ -64,6 +64,10 @@ class BoardManager(val board: GameBoard, val robot: Robot) {
         }
     }
 
+    fun restartGame() {
+        robot.currentPosition = null
+    }
+
     fun setBoardManagerListener(listener: BoardManagerListener) {
         boardManagerListener = listener
     }
